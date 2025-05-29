@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Voice Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Smart Voice Form</h1>
+        
+        <div class="speech-controls">
+            <button id="toggleListening" class="toggle-btn">🎤 Start Listening</button>
+            <div class="status">
+                <span id="status">Smart voice assistant ready!</span>
+            </div>
+        </div>
+
+        <div class="transcript-area">
+            <h3>💬 What you said:</h3>
+            <div id="transcript" class="transcript">Click "Start Listening" and speak naturally</div>
+        </div>
+
+        <form id="voiceForm" class="voice-form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Say: 'My name is John Smith'">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Say: 'Email john at gmail dot com'">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Say: 'My number is 555-1234'">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" placeholder="Say: 'I am 25' or 'Age 25'">
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group" id="gender">
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="male">
+                        <span>Male</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="female">
+                        <span>Female</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="gender" value="other">
+                        <span>Other</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="">Select Country</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                    <option value="germany">Germany</option>
+                    <option value="france">France</option>
+                    <option value="japan">Japan</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Interests:</label>
+                <div class="checkbox-group" id="interests">
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="interests" value="technology">
+                        <span>Technology</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="interests" value="sports">
+                        <span>Sports</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="interests" value="music">
+                        <span>Music</span>
+                    </label>
+                    <label class="checkbox-option">
+                        <input type="checkbox" name="interests" value="reading">
+                        <span>Reading</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="Say: 'I live in New York'">
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="3" placeholder="Say: 'Comments: I love this form!'"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" id="clearForm">Clear All</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <div class="help-box">
+            <h3>🗣️ Just Speak Naturally!</h3>
+            <div class="natural-examples">
+                <div class="example-group">
+                    <h4>💡 Basic Info:</h4>
+                    <ul>
+                        <li>"My name is Sarah Johnson"</li>
+                        <li>"I am 28" or "Age 28"</li>
+                        <li>"I live in San Francisco"</li>
+                        <li>"Email sarah at gmail dot com"</li>
+                        <li>"Phone 555 123 4567"</li>
+                    </ul>
+                </div>
+                
+                <div class="example-group">
+                    <h4>🎯 Selections:</h4>
+                    <ul>
+                        <li>"I am male" or "Gender female"</li>
+                        <li>"Country United States"</li>
+                        <li>"I like technology and music"</li>
+                        <li>"Check sports and reading"</li>
+                        <li>"Select Canada"</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="smart-note">
+                <strong>🧠 Smart AI:</strong> The form understands natural speech for all field types! 
+                Say what you want and it will automatically select the right options.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
